@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --primary: 263 75% 60%; /* #6B4DE6 */
+    --primary-foreground: 211 100% 99%;
+    --secondary: 338 50% 82%; /* #F0B5CE */
+    --secondary-foreground: 24 9.8% 10%;
+    --accent: 263 75% 95%; /* #E2E1FF */
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --ring: 20 14.3% 4.1%;
+    --radius: 0.5rem;
+    --chart-1: 263 75% 60%;
+    --chart-2: 338 50% 82%; 
+    --chart-3: 211 100% 80%;
+    --chart-4: 180 75% 60%;
+    --chart-5: 120 50% 70%;
+  }
+  
+  .dark {
+    --background: 224 30% 10%; /* #1A1A2E */
+    --foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --card: 224 20% 20%; /* #2D2D44 */
+    --card-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --primary: 263 75% 60%; /* #6B4DE6 */
+    --primary-foreground: 211 100% 99%;
+    --secondary: 338 50% 82%; /* #F0B5CE */
+    --secondary-foreground: 0 0% 98%;
+    --accent: 224 20% 20%; /* #2D2D44 */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    @apply bg-gradient-to-br from-primary to-secondary;
+  }
+  
+  .gradient-bg-dark {
+    @apply bg-gradient-to-br from-[#3B2D80] to-[#1A1A2E];
+  }
+  
+  .gradient-card-1 {
+    @apply bg-gradient-to-br from-[#D4A5F5] to-[#A7C7E7];
+  }
+  
+  .gradient-card-2 {
+    @apply bg-gradient-to-br from-[#B5DEFF] to-[#C9A7EB];
+  }
+  
+  .gradient-card-3 {
+    @apply bg-gradient-to-br from-[#FFD4D4] to-[#FFCACC];
+  }
+  
+  .app-height {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  
+  .postcard-caption {
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+  }
+  
+  .tab-active {
+    @apply border-b-2 border-primary;
+  }
+  
+  .swipe-container {
+    scroll-snap-type: x mandatory;
+  }
+  
+  .swipe-item {
+    scroll-snap-align: center;
+  }
+}
